@@ -2,11 +2,20 @@
 
 ## About
 
-This is a **UART interrupt-driven** basic shell. Therefore, GIC support has been enabled.
+**Bare-Metal GIC UART Interrupts** demonstrates interrupt-driven serial communication on an **ARMv8-A** processor without an operating system. The project configures the **Generic Interrupt Controller (GICv3)** and an **NXP i.MX8 UART** to receive serial data using interrupts, storing incoming characters in a circular buffer. Outgoing serial data is transmitted using polling. A simple command-line interface illustrates how UART interrupts, exception handling, and bare-metal software components work together.
 
 There is still a lot of garbage code within the source code.
 
-### Hints ###
+### Features
+- Bare-metal ARMv8-A startup code
+- EL2 exception vector table
+- GICv3 initialization and interrupt routing
+- Interrupt-driven UART receive
+- Circular receive buffer
+- Polling-based UART transmit
+- Simple serial command-line interface
+
+### Hints
 
 Our QEMU emulated platform doc is available here: https://www.qemu.org/docs/master/system/arm/imx8mp-evk.html
 
